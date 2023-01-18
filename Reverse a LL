@@ -1,0 +1,19 @@
+Node*reverseLl(Node*head,int low, int high){
+if(head == NULL && HEAD->NEXT == null){
+return head;
+}
+if(low == high){
+return head;
+}
+if(low > 1){
+ head->next = reverseLL(head->next, low-1, high-1);
+ return head;
+}else{
+  Node*temp = reverseLL(head->next, 1, high-1);
+  Node*next = head->next->next;
+  head->next->next = head;
+  head ->next = next;
+  return temp;
+  }
+ }
+ 
