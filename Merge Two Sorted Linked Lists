@@ -1,0 +1,15 @@
+Node<int>* sortTwoLists(Node<int>*first,Node<int>*second){
+if(first == NULL){
+return second;
+}if(second == NULL){
+return first;
+}
+Node<int>*temp;
+if(first->data < second->data){
+temp = first;
+temp->next = sortTwoLists(first->next, second);
+}else{
+temp = second;
+temp->next = sortTwoLists(first, second->next);
+}
+}
